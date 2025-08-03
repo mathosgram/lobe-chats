@@ -7,22 +7,46 @@ import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
 import { BRANDING_LOGO_URL, BRANDING_NAME } from '@/const/branding';
 
-const useStyles = createStyles(({ css }) => {
+const useStyles = createStyles(({ css, token }) => {
   return {
     extraTitle: css`
+      background: linear-gradient(135deg, ${token.colorPrimary}, ${token.colorPrimaryActive});
+      background-clip: text;
       font-weight: 300;
       white-space: nowrap;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    `,
+    logoContainer: css`
+      filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.4));
+      transition: all 0.3s ease;
+      &:hover {
+        filter: drop-shadow(0 6px 16px rgba(99, 102, 241, 0.6));
+        transform: translateY(-1px);
+      }
+    `,
+    textLogo: css`
+      background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+      background-clip: text;
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     `,
   };
 });
 
 const CustomTextLogo = memo<FlexboxProps & { size: number }>(({ size, style, ...rest }) => {
+  const { styles } = useStyles();
   return (
     <Flexbox
+      align="center"
+      className={styles.textLogo}
       height={size}
       style={{
         fontSize: size / 1.5,
-        fontWeight: 'bolder',
+        fontWeight: 700,
         userSelect: 'none',
         ...style,
       }}
@@ -34,16 +58,20 @@ const CustomTextLogo = memo<FlexboxProps & { size: number }>(({ size, style, ...
 });
 
 const CustomImageLogo = memo<Omit<ImageProps, 'alt' | 'src'> & { size: number }>(
-  ({ size, ...rest }) => {
+  ({ size, className, ...rest }) => {
+    const { styles } = useStyles();
     return (
-      <Image
-        alt={BRANDING_NAME}
-        height={size}
-        src={BRANDING_LOGO_URL}
-        unoptimized={true}
-        width={size}
-        {...rest}
-      />
+      <div className={styles.logoContainer}>
+        <Image
+          alt={BRANDING_NAME}
+          className={className}
+          height={size}
+          src={BRANDING_LOGO_URL}
+          unoptimized={true}
+          width={size}
+          {...rest}
+        />
+      </div>
     );
   },
 );
@@ -57,7 +85,13 @@ const Divider: IconType = forwardRef(({ size = '1em', style, ...rest }, ref) => 
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
-    style={{ flex: 'none', lineHeight: 1, ...style }}
+    style={{ 
+      filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))',
+      flex: 'none', 
+      lineHeight: 1, 
+      opacity: 0.6,
+      ...style 
+    }}
     viewBox="0 0 24 24"
     width={size}
     {...rest}
@@ -79,7 +113,11 @@ const CustomLogo = memo<LobeChatProps>(({ extra, size = 32, className, style, ty
     }
     case 'mono': {
       logoComponent = (
-        <CustomImageLogo size={size} style={{ filter: 'grayscale(100%)', ...style }} {...rest} />
+        <CustomImageLogo 
+          size={size} 
+          style={{ filter: 'grayscale(100%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1))', ...style }} 
+          {...rest} 
+        />
       );
       break;
     }
@@ -117,7 +155,7 @@ const CustomLogo = memo<LobeChatProps>(({ extra, size = 32, className, style, ty
   return (
     <Flexbox align={'center'} className={className} flex={'none'} horizontal {...rest}>
       {logoComponent}
-      <Divider size={extraSize} style={{ color: theme.colorFill }} />
+      <Divider size={extraSize} style={{ color: theme.colorFill, marginLeft: 8, marginRight: 8 }} />
       <div className={styles.extraTitle} style={{ fontSize: extraSize }}>
         {extra}
       </div>

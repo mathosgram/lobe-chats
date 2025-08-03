@@ -1,0 +1,54 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:0.8" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#6366f1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main circle with gradient -->
+  <circle cx="256" cy="256" r="220" fill="url(#gradient1)" filter="url(#shadow)"/>
+  
+  <!-- Inner circle for depth -->
+  <circle cx="256" cy="256" r="180" fill="url(#gradient2)" opacity="0.1"/>
+  
+  <!-- AI Brain/Neural Network Pattern -->
+  <g stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Central node -->
+    <circle cx="256" cy="256" r="24" fill="white" stroke="none"/>
+    
+    <!-- Neural connections -->
+    <path d="M256 232 L200 180 M256 232 L312 180 M256 232 L180 220 M256 232 L332 220"/>
+    <path d="M256 280 L200 332 M256 280 L312 332 M256 280 L180 292 M256 280 L332 292"/>
+    
+    <!-- Outer nodes -->
+    <circle cx="200" cy="180" r="12" fill="white" stroke="none"/>
+    <circle cx="312" cy="180" r="12" fill="white" stroke="none"/>
+    <circle cx="180" cy="220" r="12" fill="white" stroke="none"/>
+    <circle cx="332" cy="220" r="12" fill="white" stroke="none"/>
+    <circle cx="200" cy="332" r="12" fill="white" stroke="none"/>
+    <circle cx="312" cy="332" r="12" fill="white" stroke="none"/>
+    <circle cx="180" cy="292" r="12" fill="white" stroke="none"/>
+    <circle cx="332" cy="292" r="12" fill="white" stroke="none"/>
+  </g>
+  
+  <!-- Chat bubble accent -->
+  <g transform="translate(340, 140)">
+    <rect x="0" y="0" width="80" height="50" rx="20" fill="#10b981" opacity="0.9"/>
+    <path d="M20 30 L25 35 L35 25" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Search/Google accent -->
+  <g transform="translate(90, 340)">
+    <circle cx="25" cy="25" r="20" stroke="#ef4444" stroke-width="6" fill="none" opacity="0.9"/>
+    <path d="M40 40 L50 50" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
