@@ -2,11 +2,11 @@
 
 [![][image-banner]][vercel-link]
 
-# Lobe Chat
+# ImoogleAI
 
-An open-source, modern-design ChatGPT/LLMs UI/Framework.<br/>
+An open-source, modern-design AI Chat UI/Framework with beautiful design.<br/>
 Supports speech-synthesis, multi-modal, and extensible ([function call][docs-functionc-call]) plugin system.<br/>
-One-click **FREE** deployment of your private OpenAI ChatGPT/Claude/Gemini/Groq/Ollama chat application.
+One-click **FREE** deployment of your private AI chat application with ChatGPT/Claude/Gemini/Groq/Ollama.
 
 **English** · [简体中文](./README.zh-CN.md) · [Official Site][official-site] · [Changelog][changelog] · [Documents][docs] · [Blog][blog] · [Feedback][github-issues-link]
 
@@ -27,7 +27,7 @@ One-click **FREE** deployment of your private OpenAI ChatGPT/Claude/Gemini/Groq/
 [![][github-license-shield]][github-license-link]<br>
 [![][sponsor-shield]][sponsor-link]
 
-**Share LobeChat Repository**
+**Share ImoogleAI Repository**
 
 [![][share-x-shield]][share-x-link]
 [![][share-telegram-shield]][share-telegram-link]
@@ -37,7 +37,7 @@ One-click **FREE** deployment of your private OpenAI ChatGPT/Claude/Gemini/Groq/
 [![][share-mastodon-shield]][share-mastodon-link]
 [![][share-linkedin-shield]][share-linkedin-link]
 
-<sup>Pioneering the new age of thinking and creating. Built for you, the Super Individual.</sup>
+<sup>🚀 Beautiful AI Chat Experience. Built for the modern web with stunning design.</sup>
 
 [![][github-trending-shield]][github-trending-url]
 

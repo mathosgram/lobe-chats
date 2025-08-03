@@ -1,16 +1,15 @@
-// the code below can only be modified with commercial license
-// if you want to use it in the commercial usage
-// please contact us for more information: hello@lobehub.com
+// Custom branding configuration for ImoogleAI
+// Modern AI-powered chat platform with beautiful design
 
 export const LOBE_CHAT_CLOUD = 'ImoogleAI Cloud';
 
 export const BRANDING_NAME = 'ImoogleAI';
-export const BRANDING_LOGO_URL = '';
+export const BRANDING_LOGO_URL = '/logo.svg';
 
 export const ORG_NAME = 'ImoogleAI';
 
 export const BRANDING_URL = {
-  help: undefined,
-  privacy: undefined,
-  terms: undefined,
+  help: 'https://docs.imoogleai.com',
+  privacy: 'https://imoogleai.com/privacy',
+  terms: 'https://imoogleai.com/terms',
 };
