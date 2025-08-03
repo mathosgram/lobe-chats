@@ -17,6 +17,14 @@ const useStyles = createStyles(({ css, token }) => {
       -webkit-text-fill-color: transparent;
       background-clip: text;
     `,
+    logoContainer: css`
+      filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.4));
+      transition: all 0.3s ease;
+      &:hover {
+        filter: drop-shadow(0 6px 16px rgba(99, 102, 241, 0.6));
+        transform: translateY(-1px);
+      }
+    `,
     textLogo: css`
       background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
       -webkit-background-clip: text;
@@ -25,14 +33,6 @@ const useStyles = createStyles(({ css, token }) => {
       text-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
       font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       letter-spacing: -0.02em;
-    `,
-    logoContainer: css`
-      filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.4));
-      transition: all 0.3s ease;
-      &:hover {
-        filter: drop-shadow(0 6px 16px rgba(99, 102, 241, 0.6));
-        transform: translateY(-1px);
-      }
     `,
   };
 });
@@ -86,10 +86,10 @@ const Divider: IconType = forwardRef(({ size = '1em', style, ...rest }, ref) => 
     strokeLinecap="round"
     strokeLinejoin="round"
     style={{ 
+      filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))',
       flex: 'none', 
       lineHeight: 1, 
       opacity: 0.6,
-      filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))',
       ...style 
     }}
     viewBox="0 0 24 24"
