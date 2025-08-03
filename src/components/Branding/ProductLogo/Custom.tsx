@@ -10,12 +10,12 @@ import { BRANDING_LOGO_URL, BRANDING_NAME } from '@/const/branding';
 const useStyles = createStyles(({ css, token }) => {
   return {
     extraTitle: css`
+      background: linear-gradient(135deg, ${token.colorPrimary}, ${token.colorPrimaryActive});
+      background-clip: text;
       font-weight: 300;
       white-space: nowrap;
-      background: linear-gradient(135deg, ${token.colorPrimary}, ${token.colorPrimaryActive});
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     `,
     logoContainer: css`
       filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.4));
@@ -27,12 +27,12 @@ const useStyles = createStyles(({ css, token }) => {
     `,
     textLogo: css`
       background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
       font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     `,
   };
 });
